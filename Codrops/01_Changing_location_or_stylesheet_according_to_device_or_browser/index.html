@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript">
-  function browser() {
-    var browser = navigator.userAgent;
-    // alert(browser);
+  <script type="text/javascript"> 
+    function browser(){
+      var browser = navigator.userAgent;
+      //alert(browser);
 
-    // Windows Mobile
-    if (browser.match("MDA_compact") || browser.match("MSIE")) {
-      window.location.href = "mda/index.html";
+      //Windows Mobile
+      if (browser.match("MDA_compact")|| browser.match("MSIE")) {
+        window.location.href = "mda/index.html";
+      }
+      //iPhone & Rest
+      else{
+        document.write('<meta name="apple-mobile-web-app-capable" content="yes" />'
+        +'<link rel="apple-touch-icon" href="webapplogo.gif"/>'    
+        +'<meta name="apple-mobile-web-app-status-bar-style" content="black" />'
+        +'<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />'
+        +'<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />'
+        +'<link href="style.css" rel="stylesheet" type="text/css" />'
+        +'<link href="pie.css" rel="stylesheet" type="text/css" />'
+        +'<link href="chart.css" rel="stylesheet" type="text/css" />'
+        +'<link href="messages.css" rel="stylesheet" type="text/css" />'
+        +'<link href="news.css" rel="stylesheet" type="text/css" />'
+        +'<link rel="stylesheet" href="stylesheets/glider.css" type="text/css" media="screen" charset="utf-8">');   
+      }
     }
-    // iPhone & Rest
-    else {
-      document.write('<meta name="apple-mobile-web-app-capable" content="yes" />'
-      +'<link rel="apple-touch-icon" href="webapplogo.gif" />'
-      +'<meta name="apple-mobile-web-app-status-bar-style" content="black" />'
-      +'<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />'
-      +'<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />'
-      +'<link href="style.css" rel="stylesheet" type="text/css" />'
-      +'<link href="pie.css" rel="stylesheet" type="text/css" />'
-      +'<link href="chart.css" rel="stylesheet" type="text/css" />'
-      +'<link href="messages.css" rel="stylesheet" type="text/css" />'
-      +'<link href="news.css" rel="stylesheet" type="text/css" />'
-      +'<link rel="stylesheet" href="stylesheets/glider.css" type="text/css" media="screen" charset="utf-8">');              
-    }
-  }
-</script>
+
+    browser();
+  </script>
 </head>
 <body>
 </body>
